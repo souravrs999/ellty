@@ -12,7 +12,12 @@ const data = [
 export default function Home() {
   return (
     <main className="min-h-screen w-full grid place-items-center">
-      <div className="w-[370px] h-[326px] rounded-[6px] border-[1px] border-[#EEEEEE] drop-shadow-card p-[10px_0px_10px_0px]">
+      <div
+        className="w-[370px] h-[326px] rounded-[6px] border-[1px] border-[#EEEEEE] drop-shadow-card p-[10px_0px_10px_0px]"
+        style={{
+          boxShadow: "0px 8px 15px 0px #1414141F, 0px 0px 4px 0px #1414141A",
+        }}
+      >
         <ListItem title="All pages" />
         <Separator />
         {data.map((i) => (
