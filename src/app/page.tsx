@@ -7,6 +7,8 @@ const data = [
   { id: 2, title: "Page 2", checked: false },
   { id: 3, title: "Page 3", checked: false },
   { id: 4, title: "Page 4", checked: false },
+  { id: 5, title: "Page 5", checked: false },
+  { id: 6, title: "Page 6", checked: false },
 ];
 
 export default function Home() {
@@ -15,9 +17,16 @@ export default function Home() {
       <div className="w-[370px] h-[326px] rounded-[6px] border-[1px] border-[#EEEEEE] shadow-card p-[10px_0px_10px_0px]">
         <ListItem title="All pages" />
         <Separator />
-        {data.map((i) => (
-          <ListItem key={i.id} title={i.title} />
-        ))}
+        <div
+          className="max-h-[165px] overflow-y-auto"
+          style={{
+            scrollbarWidth: "none",
+          }}
+        >
+          {data.map((i) => (
+            <ListItem key={i.id} title={i.title} />
+          ))}
+        </div>
         <Separator />
         <div className="p-[10px_10px_10px_15px]">
           <Button className="mx-auto">Done</Button>
