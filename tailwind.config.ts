@@ -18,8 +18,8 @@ const config = {
       },
     },
     extend: {
-      dropShadow: {
-        card: ["0px 8px 15px 0px #1414141F", "0px 0px 4px 0px #1414141A"],
+      boxShadow: {
+        card: "0px 8px 15px 0px #1414141F, 0px 0px 4px 0px #1414141A",
       },
     },
   },
